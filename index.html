@@ -563,7 +563,7 @@ button{
   <div id="rankModal" class="rank-modal">
     <div class="rank-box">
       <button class="close-rank" onclick="closeLeaderboard()">×</button>
-      <div class="rank-title">Food Waste Rush Ranking </div>
+      <div class="rank-title"> Ranking </div>
       <div id="rankList"><div class="loading">Loading...</div></div>
     </div>
   </div>
@@ -829,11 +829,8 @@ function collectItem(item,index){
     wrong++;
     score = Math.max(0, score - 50);
 
-    // ขยะตกเร็วขึ้น
+    // ขยะตกเร็วขึ้น แต่เกมยังเล่นจนหมดเวลา
     speed += 0.35;
-
-    clearInterval(spawnTimer);
-    spawnTimer = setInterval(spawnItem, spawnRate);
 
     showToast("ผิด! ขยะเริ่มตกเร็วขึ้น ⚠️", "red");
 
