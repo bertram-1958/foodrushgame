@@ -698,9 +698,6 @@ let lastSpawnX = -999;
 let lastSpawnTime = 0;
 let hasSubmitted = false;
 
-let spawnRate = 760;
-const MIN_SPAWN_RATE = 320;
-
 function showPage(id){
   document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
   document.getElementById(id).classList.add("active");
@@ -737,7 +734,7 @@ function startGame(){
   updateHUD();
   showPage("runPage");
 
-  spawnTimer = setInterval(spawnItem, spawnRate);
+  spawnTimer = setInterval(spawnItem, 760);
   clockTimer = setInterval(() => {
     timeLeft--;
     speed += 0.04;
@@ -833,7 +830,7 @@ function collectItem(item,index){
     score = Math.max(0, score - 50);
 
     // ขยะตกเร็วขึ้น
-    spawnRate = Math.max(MIN_SPAWN_RATE, spawnRate - 45);
+    speed += 0.35;
 
     clearInterval(spawnTimer);
     spawnTimer = setInterval(spawnItem, spawnRate);
