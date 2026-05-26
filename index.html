@@ -36,6 +36,7 @@ button{
 .app{
   width:100vw;
   height:100vh;
+  padding-top:env(safe-area-inset-top);
   max-width:480px;
   margin:auto;
   position:relative;
@@ -54,7 +55,7 @@ button{
 .office-bg{
   position:absolute;
   inset:0;
-  background:url("images/bg-mobile.webp") center/cover no-repeat;
+  background:url("images/bg-mobile.webp") center top/cover no-repeat;
   z-index:0;
 }
 
@@ -73,8 +74,12 @@ button{
   position:relative;
   z-index:5;
   text-align:center;
-  width:86%;
-  margin:10px auto 22px;
+  width:88%;
+  margin:6px auto 22px;
+  padding:10px 14px;
+  border-radius:18px;
+  background:rgba(0,0,0,.38);
+  backdrop-filter:blur(3px);
   font-size:18px;
   font-weight:800;
   color:#fff;
@@ -139,12 +144,12 @@ button{
 
 .rank-btn{
   position:fixed;
-  top:16px;
+  top:48px;
   right:16px;
   z-index:80;
-  min-width:54px;
-  height:54px;
-  padding:0 14px;
+  width:58px;
+  height:58px;
+  padding:0;
   border:none;
   border-radius:28px;
   background:var(--green);
@@ -156,7 +161,7 @@ button{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:5px;
+  gap:0;
 }
 
 .rank-icon{
@@ -502,9 +507,9 @@ button{
   <div id="flash" class="flash"></div>
   <div id="toast" class="toast"></div>
 
-  <button id="rankBtn" class="rank-btn" onclick="openLeaderboard()">
-    <span>🏆</span> Rank
-  </button>
+<button id="rankBtn" class="rank-btn" onclick="openLeaderboard()">
+  🏆
+</button>
 
   <div id="rankModal" class="rank-modal">
     <div class="rank-box">
@@ -516,13 +521,17 @@ button{
 
   <section id="startPage" class="page active">
     <img src="images/office-food-waste-rush-logo.webp" class="game-logo" alt="Food Waste Rush Logo">
-    <div class="subtitle">เก็บ Food Waste ให้ถูก แล้วส่งเข้าเครื่องทำปุ๋ย 🌱</div>
+    <div class="subtitle">
+    มาร่วมทำปุ๋ยและปลูกต้นไม้ออนไลน์กัน 🌱
+    </div>
 
     <div class="start-card">
       <p>
         ใช้นิ้วสไลด์ตัวละครซ้าย–ขวา<br>
         เก็บเฉพาะเศษอาหาร<br>
         หลบขยะที่ทำปุ๋ยไม่ได้
+        
+        ⚠️ หากเก็บผิด ขยะจะตกเร็วขึ้น!
       </p>
 
       <input id="playerInput" class="input" placeholder="ชื่อเล่น + แผนก">
