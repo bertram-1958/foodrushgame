@@ -28,6 +28,20 @@ html,body{
   font-family:"Prompt", Arial, sans-serif;
   background:url("images/bg-mobile.webp") center top/cover no-repeat;
   overflow:hidden;
+
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+  touch-action:manipulation;
+}
+  
+.player-image,
+.machine-image,
+.collected-img,
+.item img{
+  -webkit-user-drag:none;
+  -webkit-touch-callout:none;
+  user-select:none;
+  pointer-events:none;
 }
 
 button{
