@@ -35,13 +35,15 @@ button{
 
 .app{
   width:100vw;
-  height:100vh;
-  padding-top:env(safe-area-inset-top);
+  height:100dvh;
+
   max-width:480px;
   margin:auto;
+
   position:relative;
   overflow:hidden;
-  background:#d9f7ff;
+
+  background:#000;
 }
 
 .page{
@@ -55,7 +57,12 @@ button{
 .office-bg{
   position:absolute;
   inset:0;
-  background:url("images/bg-mobile.webp") center top/cover no-repeat;
+
+  background-image:url("images/bg-mobile.webp");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+
   z-index:0;
 }
 
@@ -152,7 +159,7 @@ button{
   padding:0;
   border:none;
   border-radius:28px;
-  background:var(--green);
+  background:var(--white);
   color:#000 !important;
   font-size:19px;
   font-weight:900;
@@ -514,7 +521,7 @@ button{
   <div id="rankModal" class="rank-modal">
     <div class="rank-box">
       <button class="close-rank" onclick="closeLeaderboard()">×</button>
-      <div class="rank-title">Food Waste Rush Ranking 🌱</div>
+      <div class="rank-title">Food Waste Rush Ranking </div>
       <div id="rankList"><div class="loading">Loading...</div></div>
     </div>
   </div>
@@ -529,8 +536,7 @@ button{
       <p>
         ใช้นิ้วสไลด์ตัวละครซ้าย–ขวา<br>
         เก็บเฉพาะเศษอาหาร<br>
-        หลบขยะที่ทำปุ๋ยไม่ได้
-        
+        หลบขยะที่ทำปุ๋ยไม่ได้<br>
         ⚠️ หากเก็บผิด ขยะจะตกเร็วขึ้น!
       </p>
 
