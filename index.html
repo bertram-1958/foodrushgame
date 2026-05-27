@@ -681,7 +681,7 @@ button{
 
       <div class="plant-result">
         <img id="plantImage" src="images/plant-level-1.webp" class="plant-image" alt="Plant Level">
-        <div id="plantLevel" class="plant-level">Sprout</div>
+        <div id="plantLevel" class="plant-level">Seed Starter</div>
         <div id="plantTitle" class="plant-title">พยายามอีกนิดนะ!</div>
         <p id="plantMessage" class="plant-message">เศษอาหารที่คัดแยกได้เริ่มช่วยให้ต้นไม้เติบโตแล้ว</p>
       </div>
@@ -958,36 +958,36 @@ function feedMachine(){
 function getPlantLevel(score, accuracy){
   if(score >= 1600 && accuracy >= 90){
     return {
-      level:"Big Tree",
+      level:"Compost Hero",
       image:"images/plant-level-4.webp",
-      title:"Compost Hero ตัวจริง!",
+      title:"ผู้พิทักษ์แห่ง Food Waste ตัวจริง ♻️",
       message:"คุณช่วยเปลี่ยน Food Waste ให้กลายเป็นคุณค่ากลับคืนสู่ธรรมชาติ ต้นไม้เติบโตอย่างสมบูรณ์ เพื่อโลกที่ดีขึ้นของเรา"
     };
   }
 
   if(score >= 1100 && accuracy >= 75){
     return {
-      level:"Healthy Plant",
+      level:"Eco Grower",
       image:"images/plant-level-3.webp",
       title:"ยอดเยี่ยม!",
-      message:"คุณคัดแยก Food Waste ได้ดีมาก ปุ๋ยที่ได้ช่วยให้ต้นไม้เติบโตอย่างแข็งแรง และช่วยลดขยะอินทรีย์ไปพร้อมกัน"
+      message:"คุณเข้าใจคุณค่าของการแยก Food Waste และกำลังช่วยลดปริมาณขยะ พร้อมสร้างโลกที่น่าอยู่ขึ้นในทุกวัน"
     };
   }
 
   if(score >= 600 && accuracy >= 50){
     return {
-      level:"Small Plant",
+      level:"Green Sprout",
       image:"images/plant-level-2.webp",
       title:"ทำได้ดีแล้ว!",
-      message:"การคัดแยกของคุณช่วยให้เครื่องทำปุ๋ยทำงานได้ดีขึ้น ต้นไม้เริ่มเติบโตแล้ว มารักษาความแม่นยำให้ดียิ่งขึ้นกัน"
+      message:"คุณเริ่มคัดแยกขยะได้อย่างถูกต้องและช่วยเปลี่ยนเศษอาหารให้กลับมาเป็นประโยชน์ต่อธรรมชาติอีกครั้ง"
     };
   }
 
   return {
-    level:"Sprout",
+    level:"Seed Starter",
     image:"images/plant-level-1.webp",
     title:"พยายามอีกนิดนะ!",
-    message:"เศษอาหารที่คัดแยกได้เริ่มช่วยให้ต้นไม้เติบโตแล้ว ครั้งหน้าเลือกให้แม่นขึ้น เพื่อช่วยให้ต้นไม้โตเพื่อโลกของเรา"
+    message:"🌱 แค่เริ่มต้นแยก Food Waste ก็เป็นก้าวสำคัญแล้ว ลองอีกนิด แล้วต้นไม้ของคุณจะค่อยๆ เติบโตน้าา 🌿"
   };
 }
 
