@@ -95,6 +95,46 @@ button{
   position:absolute;
   inset:0;
   display:none;
+  overflow:hidden;
+}
+  
+#resultPage{
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:calc(24px + env(safe-area-inset-bottom));
+}
+
+#resultPage .result-card{
+  margin:20px auto 24px;
+  max-height:none;
+  overflow:visible;
+}
+
+@media (max-height:760px){
+  #resultPage .result-card{
+    margin-top:12px;
+    padding:16px;
+  }
+
+  .plant-image{
+    width:130px;
+  }
+
+  .big-score{
+    font-size:44px;
+  }
+
+  .result-title{
+    font-size:24px;
+  }
+
+  .plant-title{
+    font-size:19px;
+  }
+
+  .plant-message{
+    font-size:13px;
+  }
 }
 
 .page.active{display:block}
@@ -660,6 +700,59 @@ button{
   .toast{
     top:210px;
     font-size:13px;
+  }
+}
+
+@media (max-height:760px){
+
+  .machine-page-title{
+    margin-top:14px;
+    font-size:24px;
+    padding:9px 14px;
+    border-radius:18px;
+  }
+
+  .collected-panel{
+    top:105px;
+    left:14px;
+    right:14px;
+    padding:9px;
+    font-size:14px;
+  }
+
+  .collected-list{
+    min-height:78px;
+  }
+
+  .collected-img{
+    width:32px;
+    height:32px;
+    margin:2px;
+  }
+
+  .machine{
+    width:190px;
+    height:165px;
+    bottom:92px;
+    padding-top:10px;
+  }
+
+  .machine-title{
+    font-size:14px;
+  }
+
+  .machine-image{
+    width:108px;
+    height:108px;
+  }
+
+  #machinePage .btn{
+    padding:13px;
+    font-size:18px;
+  }
+
+  #machinePage > div[style*="bottom:35px"]{
+    bottom:24px !important;
   }
 }
   
